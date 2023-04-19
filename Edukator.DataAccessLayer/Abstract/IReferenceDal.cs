@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Edukator.DataAccessLayer.Abstract
 {
-    public interface IContactInfoDal:IGenericDal<ContactInfo>
+    public interface IReferenceDal:IGenericDal<Reference>
     {
     }
 }

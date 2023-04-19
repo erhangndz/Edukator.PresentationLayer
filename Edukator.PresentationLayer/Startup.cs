@@ -1,3 +1,8 @@
+using Edukator.BusinessLayer.Abstract;
+using Edukator.BusinessLayer.Concrete;
+using Edukator.DataAccessLayer.Abstract;
+using Edukator.DataAccessLayer.Concrete;
+using Edukator.DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +17,8 @@ using System.Threading.Tasks;
 namespace Edukator.PresentationLayer
 {
     public class Startup
+
+
     {
         public Startup(IConfiguration configuration)
         {
@@ -23,6 +30,25 @@ namespace Edukator.PresentationLayer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IContactInfoDal, EfContactInfoDal>();
+            services.AddScoped<IContactInfoService,IContactInfoManager>();
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<ICourseDal, EfCourseDal>();
+            services.AddScoped<ICourseService, CourseManager>();
+            services.AddScoped<IMapDal,EfMapDal>();
+            services.AddScoped<IMapService,MapManager>();
+            services.AddScoped<IReferenceDal, EfReferenceDal>();
+            services.AddScoped<IReferenceService, ReferenceManager>();
+            services.AddScoped<IServiceDal, EfServiceDal>();
+            services.AddScoped<IServiceService, ServiceManager>();
+            services.AddScoped<ISocialMediaDal, EfSocialMediaDal>(); 
+            services.AddScoped<ISocialMediaService, SocialMediaManager>(); 
+            services.AddScoped<ISubscriberDal, EfSubscriberDal>(); 
+            services.AddScoped<ISubscriberService, SubscriberManager>(); 
             services.AddControllersWithViews();
         }
 

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Edukator.DataAccessLayer.Abstract
+namespace Edukator.BusinessLayer.Abstract
 {
-    public interface IContactInfoDal:IGenericDal<ContactInfo>
+    public interface ICategoryService: IGenericService<Category>
     {
     }
 }
