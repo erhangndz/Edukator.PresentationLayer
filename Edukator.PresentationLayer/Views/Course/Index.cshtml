@@ -1,0 +1,35 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Course>
+@{
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="card-header container">Kurs Listesi</h2>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+<table class="table table-striped container">
+
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Fiyat</th>
+        <th>Kategori</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.CourseID</td>
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td>@item.Category</td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+  
+</table>
+<a href="#" class="btn btn-outline-primary">Yeni Kurs Girişi </a>
+
+</div>
