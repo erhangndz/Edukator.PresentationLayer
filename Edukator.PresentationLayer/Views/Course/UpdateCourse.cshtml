@@ -1,17 +1,19 @@
 ﻿@model Edukator.EntityLayer.Concrete.Course
 @{
-    ViewData["Title"] = "AddCourse";
+    ViewData["Title"] = "UpdateCourse";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
+
 <div class="bg-light rounded h-100 p-4 col-xl-12">
-    <h6 class="mb-4">Yeni Kurs Girişi</h6>
+    <h6 class="mb-4">Kurs Güncelleme Sayfası</h6>
     <form method="post">
         <div class="mb-3">
+            <input type="hidden" class="form-control"  asp-for="CourseID" />
             <label for="coursetitle" class="form-label">Kurs Adı</label>
             <input type="text" class="form-control" id="coursetitle" asp-for="Title" />
         </div>
-       
+
         <div class="mb-3">
             <label for="imageurl" class="form-label">Resim URL</label>
             <input type="text" class="form-control" id="imageurl" asp-for="ImageURL" />
@@ -34,6 +36,6 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
     </form>
 </div>

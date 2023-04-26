@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Kurs Adı</th>
+                    <th scope="col">Kurs Adı</th>   
                     <th scope="col">Fiyat</th>
                     <th scope="col">Kategori</th>
                     <th scope="col">Sil</th>
@@ -26,8 +26,8 @@
                     <tr>
                         <th scope="row">@item.CourseID</th>
                         <td>@item.Title</td>
-                        <td>@item.Price</td>
-                        <td>@item.CategoryID</td>
+                        <td>@item.Price ₺</td>
+                        <td>@item.Category.CategoryName</td>
                         <td><a href="/Course/DeleteCourse/@item.CourseID" class="btn btn-outline-danger">Sil</a></td>
                         <td><a href="/Course/UpdateCourse/@item.CourseID" class="btn btn-outline-success">Güncelle</a></td>
 

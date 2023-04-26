@@ -16,6 +16,7 @@
                     <th scope="col">Kategori Adı</th>
                     <th scope="col">Sil</th>
                     <th scope="col">Güncelle</th>
+                    <th scope="col">Kurslar</th>
                    
                 </tr>
             </thead>
@@ -27,6 +28,7 @@
                         <td>@item.CategoryName</td>
                         <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Sil</a></td>
                         <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
+                        <td><a href="/Category/GetCourse/@item.CategoryID" class="btn btn-outline-info">Kurslar</a></td>
                       
 
                     </tr>
