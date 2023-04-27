@@ -62,8 +62,8 @@ namespace Edukator.PresentationLayer.Controllers
 
                                            }).ToList();
             ViewBag.v = values;
-            var y = _courseService.TGetByID(id);
-            return View(y);
+            var value = _courseService.TGetByID(id);
+            return View(value);
         }
 
         [HttpPost]

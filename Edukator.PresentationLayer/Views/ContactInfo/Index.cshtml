@@ -1,0 +1,50 @@
+﻿@model List<Edukator.EntityLayer.Concrete.ContactInfo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">İletişim Bilgileri</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Adres 1</th>
+                    <th scope="col">Adres 2</th>
+                    <th scope="col">E-Mail 1</th>
+                    <th scope="col">E-Mail 2</th>
+                    <th scope="col">Telefon 1</th>
+                    <th scope="col">Telefon 2</th>
+                    <th scope="col">Sil</th>
+                    <th scope="col">Güncelle</th>
+
+                
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.ContactInfoID</th>
+                        <td>@item.Address1</td>
+                        <td>@item.Address2</td>
+                        <td>@item.Mail1</td>
+                        <td>@item.Mail2</td>
+                        <td>@item.Phone1</td>
+                        <td>@item.Phone2</td>
+                        <td><a href="/ContactInfo/DeleteContactInfo/@item.ContactInfoID" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="/ContactInfo/UpdateContactInfo/@item.ContactInfoID" class="btn btn-outline-success">Güncelle</a></td>
+
+                     
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/ContactInfo/AddContactInfo" class="btn btn-primary">Yeni İletişim Bilgisi Girişi</a>
+    </div>
+</div>

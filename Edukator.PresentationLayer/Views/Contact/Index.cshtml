@@ -1,0 +1,39 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Mesajlar</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Konu</th>
+                    <th scope="col">Sil</th>
+         
+                    <th scope="col">Mesajı Aç</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.ContactID</th>
+                        <td>@item.NameSurname</td>
+                        <td>@item.Subject</td>
+                        <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+                       
+                        <td><a href="/Contact/GetMessage/@item.ContactID" class="btn btn-outline-info">Mesajı Aç</a></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+     
+    </div>
+</div>
+
