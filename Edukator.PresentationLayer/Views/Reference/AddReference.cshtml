@@ -1,0 +1,29 @@
+﻿@model Edukator.EntityLayer.Concrete.Reference
+@{
+    ViewData["Title"] = "AddReference";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="bg-light rounded h-100 p-4 col-xl-12">
+    <h6 class="mb-4">Referans Ekleme Sayfası</h6>
+    <form method="post">
+        <input type="hidden" asp-for="ReferenceID" />
+        <div class="mb-3">
+            <label for="namesurname" class="form-label">Ad Soyad</label>
+            <input type="text" class="form-control" id="namesurname" asp-for="NameSurname" />
+        </div>
+        <div class="mb-3">
+            <label for="job" class="form-label">Mesleği</label>
+            <input type="text" class="form-control" id="job" asp-for="Job" />
+        </div>
+        <div class="mb-3">
+            <label for="comment" class="form-label">Yorumu</label>
+            <input type="text" class="form-control" id="comment" asp-for="Comment" />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
+
+

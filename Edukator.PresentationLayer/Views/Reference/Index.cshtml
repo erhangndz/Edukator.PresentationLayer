@@ -1,0 +1,44 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Reference>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Referanslar</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Meslek</th>
+                    <th scope="col">Yorum</th>
+                    <th scope="col">Güncelle</th>
+                    <th scope="col">Sil</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.ReferenceID</th>
+                        <td>@item.NameSurname</td>
+                        <td>@item.Job</td>
+                        <td>@item.Comment</td>
+                        <td><a href="/Reference/DeleteReference/@item.ReferenceID" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="/Reference/UpdateReference/@item.ReferenceID" class="btn btn-outline-success">Güncelle</a></td>
+
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Reference/AddReference" class="btn btn-primary">Yeni Referans Girişi</a>
+
+    </div>
+</div>
+
