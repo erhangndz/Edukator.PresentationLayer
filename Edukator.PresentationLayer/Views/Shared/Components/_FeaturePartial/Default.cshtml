@@ -1,0 +1,46 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Feature>
+
+<section class="bannerw3l-hnyv">
+    @foreach(var item in Model){
+    <div class="banner-layer">
+        <video autoplay muted loop id="myVideo">
+            <source src="@item.VideoURL" type="video/mp4">
+            Tarayıcınız HTML5 video desteklemiyor.
+        </video>
+        <div class="main-content-top">
+            <div class="container">
+                <div class="main-content">
+                    <!-- if logo is image enable this
+                    <a class="logo" href="index.html">
+                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                    </a> -->
+                    
+                    <h4>@item.Title1</h4>
+                    <h3>@item.Title2</h3>
+                   
+                    <a href="about.html" class="btn btn-style transparant-btn mt-md-5 mt-4">Daha Fazla Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    <div class="w3apply-admission">
+        <div class="apply-admission-wrap">
+            <div class="apply-admission-inner">
+                <h4 class="title text-center">
+                    <span>Katılmak İçin Başvur</span>
+                </h4>
+                <div class="caption text-center mb-2">
+                    İşinizi Kolaylaştırın!
+                </div>
+                <div class="apply-form">
+                    <form action="#" class="" method="post">
+                        <input type="text" name="name" placeholder="Adınız" required="">
+                        <input type="email" name="email" placeholder="E-Mail Adresiniz" required="">
+                        <button class="btn btn-style btn-primary">Hemen Başvur</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -50,6 +50,9 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ISocialMediaService, SocialMediaManager>(); 
             services.AddScoped<ISubscriberDal, EfSubscriberDal>(); 
             services.AddScoped<ISubscriberService, SubscriberManager>(); 
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+            services.AddScoped<IFeatureService, FeatureManager>();
+
 
             services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
             services.AddControllersWithViews();
