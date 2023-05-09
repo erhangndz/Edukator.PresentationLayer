@@ -52,6 +52,8 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ISubscriberService, SubscriberManager>(); 
             services.AddScoped<IFeatureDal, EfFeatureDal>();
             services.AddScoped<IFeatureService, FeatureManager>();
+            services.AddScoped<IAboutDal, EfAboutDal>();
+            services.AddScoped<IAboutService, AboutManager>();
 
 
             services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
