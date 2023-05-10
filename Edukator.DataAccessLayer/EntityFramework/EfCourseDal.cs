@@ -18,5 +18,10 @@ namespace Edukator.DataAccessLayer.EntityFramework
         Context context = new Context();
             return context.Courses.Include(x=>x.Category).ToList();
         }
+        public List<Course> GetCoursesWithCategories()
+        {
+            Context context = new Context();
+            return context.Courses.Include(x => x.Category).ToList();
+        }
     }
 }

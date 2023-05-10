@@ -4,6 +4,7 @@ using Edukator.DataAccessLayer.Abstract;
 using Edukator.DataAccessLayer.Concrete;
 using Edukator.DataAccessLayer.EntityFramework;
 using Edukator.EntityLayer.Concrete;
+using Edukator.PresentationLayer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -56,7 +57,7 @@ namespace Edukator.PresentationLayer
             services.AddScoped<IAboutService, AboutManager>();
 
 
-            services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
+            services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
             services.AddControllersWithViews();
         }
 

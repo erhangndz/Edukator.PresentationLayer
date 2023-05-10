@@ -1,0 +1,25 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/dashmin/css/bootstrap.min.css" rel="stylesheet" />
+<br /><br />
+<h3 class="container">Giriş Paneli </h3>
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Kullanıcı Adı</label>
+        <input type="text" class="form-control" asp-for="Username"/>
+        <br />
+        <label>Şifre</label>
+        <input type="password" class="form-control" asp-for="Password" />
+
+        <button class="btn btn-outline-primary">Giriş Yap</button>
+
+    </form>
+
+
+
+
+</div>
