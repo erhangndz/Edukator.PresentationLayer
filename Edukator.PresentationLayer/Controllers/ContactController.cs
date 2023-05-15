@@ -31,6 +31,24 @@ namespace Edukator.PresentationLayer.Controllers
             var values = _contactService.TGetByID(id);
             return View(values);
         }
+
+        public IActionResult Contacts() 
+        {
+        return View();
+        }
+
+        [HttpGet]
+        public PartialViewResult SendMessagePartial()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult SendMessagePartial(Contact p)
+        {
+            _contactService.TInsert(p);
+            return RedirectToAction("Contacts");
+        }
     }
 }
 

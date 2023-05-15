@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Contacts";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<!-- breadcrumb -->
+<section class="w3l-about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-5 py-md-4">
+            <div class="w3breadcrumb-gids">
+                <div class="w3breadcrumb-left text-left">
+                    <h2 class="title AboutPageBanner">
+                        İletişim
+                    </h2>
+                    <p class="inner-page-para mt-2">
+                        İstediğiniz Zaman İstediğiniz Yerde Öğrenmeye Başlayın
+                        Geleceğinizi Hızlandırın.
+                    </p>
+                </div>
+                <div class="w3breadcrumb-right">
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="/Home/Index">Ana Sayfa</a></li>
+                        <li class="active"><span class="fas fa-angle-double-right mx-2"></span> İletişim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//breadcrumb-->
+<!-- contacts-5-grid -->
+<div class="w3l-contact-10 py-5" id="contact">
+    <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h5 class="title-subw3hny text-center">Bizimle İletişime Geçin</h5>
+                <h3 class="title-w3l">Kafanıza takılan  <span class="inn-text">sorularınız mı var? </span></h3>
+            </div>
+          @await Component.InvokeAsync("_ContactInfoPartial")
+           @await Html.PartialAsync("~/Views/Contact/SendMessagePartial.cshtml")
+        </div>
+    </div>
+    <!-- //contacts-5-grid -->
+</div>
+
+<div class="contacts-sub-5">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12239.34542896242!2d32.81258568677484!3d39.922678170807956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f3ac97e815d%3A0xfd4a4110ab5e5636!2sEmek%2C%2006490%20%C3%87ankaya%2FAnkara!5e0!3m2!1str!2str!4v1684189959328!5m2!1str!2str"
+
+    
+            style="border:0" allowfullscreen></iframe>
+</div>

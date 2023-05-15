@@ -1,0 +1,30 @@
+﻿@model Edukator.EntityLayer.Concrete.Contact
+<div class="form-inner-cont mt-5">
+    <form asp-action="SendMessagePartial" asp-controller="Contact" method="post" class="signin-form">
+        <div class="form-grids">
+            <div class="form-input">
+                <input type="text" asp-for="NameSurname" placeholder="Adınız Soyadınız *"
+                       required="" />
+            </div>
+            <div class="form-input">
+                <input type="text" asp-for="Subject" placeholder="Konu "
+                       required="" />
+            </div>
+            <div class="form-input">
+                <input type="email" asp-for="Mail" placeholder="Email Adresiniz *"
+                       required="" />
+            </div>
+            <div class="form-input">
+                <input type="text" asp-for="Phone" placeholder="Telefon Numaranız *"
+                       required="" />
+            </div>
+        </div>
+        <div class="form-input">
+            <textarea asp-for="Message" placeholder="Mesajınızı yazın"
+                      required=""></textarea>
+        </div>
+        <div class="text-right">
+            <button type="submit" class="btn btn-style btn-primary">Mesaj Gönder</button>
+        </div>
+    </form>
+</div>

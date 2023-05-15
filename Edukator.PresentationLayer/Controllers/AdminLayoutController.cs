@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Edukator.BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 
 namespace Edukator.PresentationLayer.Controllers
 {
+    
     public class AdminLayoutController : Controller
     {
+     
+
         public IActionResult Index()
         {
             return View();
@@ -27,6 +31,7 @@ namespace Edukator.PresentationLayer.Controllers
 
         public PartialViewResult PartialNavbar()
         {
+           
             return PartialView();
         }
 

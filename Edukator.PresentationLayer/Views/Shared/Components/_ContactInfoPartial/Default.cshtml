@@ -1,0 +1,32 @@
+﻿@model List<Edukator.EntityLayer.Concrete.ContactInfo>
+
+    @foreach(var item in Model){
+<div class="contacts-5-grid-main mt-5">
+    <div class="contacts-5-grid">
+        <div class="map-content-5">
+            <div class="d-grid grid-col-2">
+                <div class="contact-type">
+                    <div class="address-grid">
+                        <h6><span class="fas fa-map-marked-alt"></span> Adres</h6>
+                        <p>@item.Address1</p>
+                            <p>@item.Address2</p>
+                    </div>
+                    <div class="address-grid">
+                        <h6><span class="fas fa-envelope-open-text"></span> Email</h6>
+                        <a href="mailto:@item.Mail1" class="link1">@item.Mail1</a>
+                        <a href="mailto:@item.Mail2"
+                           class="link1">@item.Mail2</a>
+
+                    </div>
+                    <div class="address-grid">
+                        <h6><span class="fas fa-phone-alt"></span> Telefon</h6>
+                        <a href="#" class="link1">@item.Phone1</a>
+                        <a href="#" class="link1">@item.Phone2</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

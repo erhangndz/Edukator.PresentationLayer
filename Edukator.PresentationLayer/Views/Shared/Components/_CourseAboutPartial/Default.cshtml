@@ -1,0 +1,60 @@
+﻿@model List<Edukator.EntityLayer.Concrete.About>
+
+
+<section class="w3l-homeblock1" id="about">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-3">
+            <div class="row cwp23-grids align-items-center">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-6">
+                        <h5 class="title-subw3hny">Kursları Keşfet</h5>
+
+                        <h3 class="title-w3l">@item.Title1 <span class="inn-text">@item.Title2</span></h3>
+                        <h6 class="mt-md-4 mt-md-5 mt-4">
+                            @item.Description1
+                            <br>@item.Description2
+                        </h6>
+                        <a href="#courses" class="btn btn-style btn-primary mt-lg-5 mt-4">Tüm Kursları Gör</a>
+                    </div>
+                    <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5 pl-lg-5">
+                        <div class="cwp23-text-cols row">
+                            <div class="column col-6 mt-lg-4 pt-lg-1">
+                                <div class="column-w3-img position-relative">
+                                    <a href="#">
+                                        <img src="@item.Image1" alt=""
+                                             class="radius-image img-fluid">
+                                    </a>
+                                    <div class="edu-info">
+                                        <h4 class="edu-heading-title"><a href="#">@item.ImageText1</a></h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="column col-6">
+                                <div class="column-w3-img position-relative">
+                                    <a href="#">
+                                        <img src="@item.Image2" alt=""
+                                             class="radius-image img-fluid">
+                                    </a>
+                                    <div class="edu-info">
+                                        <h4 class="edu-heading-title"><a href="#">@item.ImageText2</a></h4>
+                                    </div>
+                                </div>
+                                <div class="column-w3-img position-relative mt-4">
+                                    <a href="#">
+                                        <img src="@item.Image3" alt=""
+                                             class="radius-image img-fluid">
+                                    </a>
+                                    <div class="edu-info">
+                                        <h4 class="edu-heading-title"><a href="#">@item.ImageText3</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
