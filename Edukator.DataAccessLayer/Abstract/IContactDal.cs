@@ -9,5 +9,6 @@ namespace Edukator.DataAccessLayer.Abstract
 {
     public interface IContactDal:IGenericDal<Contact>
     {
+        List<Contact> GetLast4Message();
     }
 }

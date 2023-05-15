@@ -17,11 +17,11 @@
                             <div class="post-pos">
                                 @if(item.Category.CategoryName=="Yazılım")
                                 {
-                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe blue">@item.Category.CategoryName</a>
+                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe bg-danger">@item.Category.CategoryName</a>
                                 }
                                     @if (item.Category.CategoryName == "Spor")
                                     {
-                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe yellow ml-2">@item.Category.CategoryName</a>
+                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe bg-warning">@item.Category.CategoryName</a>
                                     }
                                     @if (item.Category.CategoryName == "İngilizce")
                                     {
@@ -33,7 +33,7 @@
                                     }
                                     @if (item.Category.CategoryName == "Matematik")
                                     {
-                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe bg-info">@item.Category.CategoryName</a>
+                                        <a href="/Course/GetByCategory/@item.CategoryID" class="receipe bg-secondary">@item.Category.CategoryName</a>
                                     }
                             </div>
                         </div>

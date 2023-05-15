@@ -13,12 +13,13 @@
                     </p>
                     <div class="columns-2">
                         <ul class="social">
-                            @foreach(var item in Model){
+                            @foreach(var item in Model)
+                            {
                             <li>
                                 <a href="@item.SocialMediaURL" target="_blank"><span class="@item.SocialMediaIcon" aria-hidden="true"></span></a>
                             </li>
                             }
-                            
+                         
                         </ul>
                     </div>
                 </div>

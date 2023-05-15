@@ -14,10 +14,12 @@ namespace Edukator.PresentationLayer.Controllers
     public class HomeController : Controller
     {
         private readonly ISubscriberService _subscriberService;
+        private readonly ISocialMediaService _socialMediaService;
 
-        public HomeController(ISubscriberService subscriberService)
+        public HomeController(ISubscriberService subscriberService, ISocialMediaService socialMediaService)
         {
             _subscriberService = subscriberService;
+            _socialMediaService = socialMediaService;
         }
 
         public IActionResult Index()
@@ -36,6 +38,11 @@ namespace Edukator.PresentationLayer.Controllers
             _subscriberService.TInsert(p);
 
             return RedirectToAction("Index");
+        }
+        public PartialViewResult FooterPartial()
+        {
+            var values = _socialMediaService.TGetList();
+            return PartialView(values);
         }
 
     }

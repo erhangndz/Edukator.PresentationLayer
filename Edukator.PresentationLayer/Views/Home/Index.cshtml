@@ -1,15 +1,16 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
 <!doctype html>
 <html lang="en">
 
-@await Component.InvokeAsync("_HeadPartial")
+
 
 <body>
-    @await Component.InvokeAsync("_NavbarPartial")
+    
+
 
     @await Component.InvokeAsync("_FeaturePartial")
 
@@ -35,9 +36,7 @@
     @await Html.PartialAsync("~/Views/Home/SubscribePartial.cshtml")
  
     <!--/footer-->
-    @await Component.InvokeAsync("_FooterPartial")
-
-    @await Component.InvokeAsync("_ScriptPartial")
+   
 
 </body>
 
