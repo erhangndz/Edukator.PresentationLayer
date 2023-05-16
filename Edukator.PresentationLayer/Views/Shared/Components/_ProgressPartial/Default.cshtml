@@ -1,0 +1,37 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Course>
+@{
+    int count = 0;
+    string value="";
+}
+<section class="w3l-servicesblock w3l-servicesblock1 py-5" id="progress">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-6 align-self pr-lg-4">
+                @foreach(var item in Model){
+
+                    count = item.CourseID * 5;
+
+
+                    <div class="progress-info info1">
+                    <h6 class="progress-tittle">@item.Title <span class=""> @count%</span></h6>
+                    <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width:@count%" aria-valuenow="90"
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5">
+                <h5 class="title-subw3hny mb-1">Kurs İçeriklerimiz</h5>
+                <h3 class="title-w3l"> Kurslarımızın İlerleme <span class="inn-text">Oranları</span></h3>
+                <p class="mt-md-4 mt-3">
+                    Yazılımdan müziğe fotoğrafçılıktan girişimciliğe, resimden İngilizceye kadar onlarca farklı kategoride yüzlerce kurs sizlerle.
+                    Alanında uzman eğitmenlerin en profesyonel çekim ortamlarında hazırladığı kurslarımız sizleri bekliyor.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>

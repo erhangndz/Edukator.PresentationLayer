@@ -1,0 +1,37 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Teacher>
+
+<section class="w3l-team-main team py-5" id="team">
+    <div class="container py-lg-5">
+        <h5 class="title-subw3hny mb-1 text-center">Ekibimiz</h5>
+        <h3 class="title-w3l text-center">Eğitmenlerimizle <span class="inn-text">Tanışın</span></h3>
+        <div class="row team-row">
+            @foreach(var item in Model){
+            <div class="col-lg-3 col-6 team-wrap mt-5">
+                <div class="team-member text-center">
+                    <div class="team-img">
+                        <img src="@item.Image" alt="" class="radius-image">
+                        <div class="overlay-team">
+                            <div class="team-details text-center">
+                                <div class="socials mt-20">
+                                    <a href="@item.Facebook">
+                                        <span class="fab fa-facebook-f"></span>
+                                    </a>
+                                    <a href="@item.Twitter">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                    <a href="@item.Linkedin">
+                                        <span class="fab fa-linkedin-in"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#url" class="team-title">@item.NameSurname</a>
+                    <p>@item.Title</p>
+                </div>
+            </div>
+            
+       }
+        </div>
+    </div>
+</section>
