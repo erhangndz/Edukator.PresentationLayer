@@ -13,6 +13,13 @@ namespace Edukator.DataAccessLayer.EntityFramework
 {
     public class EfCourseRegisterDal : GenericRepository<CourseRegister>, ICourseRegisterDal
     {
+        public List<CourseRegister> CourseRegisterListwithCoursebyUser(int id)
+        {
+            using var context=new Context();
+            var values = context.CourseRegisters.Where(x => x.AppUserID == id).Include(x => x.Course).ToList();
+            return values;
+        }
+
         public List<CourseRegister> CourseRegistersListwithCoursesandUsers()
         {
            using var context= new Context();
