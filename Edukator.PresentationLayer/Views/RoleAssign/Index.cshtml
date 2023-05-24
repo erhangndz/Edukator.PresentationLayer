@@ -1,0 +1,41 @@
+﻿@model List<Edukator.EntityLayer.Concrete.AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Öğrenciler</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Rol Ata</th>
+
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Name @item.Surname</td>
+                        <td><a href="/RoleAssign/AssignRole/@item.Id" class="btn btn-outline-warning"><i class="fa fa-user-cog me-2"></i>Rol Ata</a></td>
+
+                        
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

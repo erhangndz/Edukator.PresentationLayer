@@ -1,0 +1,15 @@
+﻿@model Edukator.EntityLayer.Concrete.AppRole
+@{
+    ViewData["Title"] = "AddRole";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Rol Ekleme Sayfası</h3>
+<form method="post">
+    <label>Rol Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <button class="btn btn-primary">Rolü Ekle</button>
+
+</form>
+
